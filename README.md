@@ -1,6 +1,6 @@
 # PHP Rest API
 
-## How to intall?
+## How to install?
 
 Once Apache and MySQL is ready, deploy the site to localhost (or server) and update the values for following parameters in index.php.
 
@@ -17,7 +17,7 @@ $config = array(
 );
 ```
 
-After setting values for the above parameters, visit the URL http://<servername>/phprestapi/config/install.php. install.php will create the database and tables.
+After setting values for the above parameters, visit the URL http://servername/phprestapi/config/install.php. install.php will create the database and tables.
 
 If there is no database exists, install.php will create the database and tables. Otherwise, displays the message "Database exists!".
 
@@ -26,7 +26,7 @@ If there is no database exists, install.php will create the database and tables.
 ### Create Product
 Method to create single product. 
 
-##### POST http://<servername>/phprestapi/product
+##### POST http://servername/phprestapi/product
 
 ##### BODY PARAMS
 
@@ -75,7 +75,7 @@ Returns a product object if the call succeeded.
 ### Create Purchaser
 Method to create single purchaser.
 
-##### POST http://<servername>/phprestapi/purchaser
+##### POST http://servername/phprestapi/purchaser
 
 ##### BODY PARAMS
 
@@ -125,7 +125,7 @@ Returns a purchaser object if the call succeeded.
 ### Create Purchaser
 Method to create single purchase.
 
-##### POST http://<servername>/phprestapi/purchaser-product
+##### POST http://servername/phprestapi/purchaser-product
 
 ##### BODY PARAMS
 
@@ -187,7 +187,7 @@ Returns a purchase object if the call succeeded.
 }
 ```
 
-3. Invalid Product ID
+4. Invalid Product ID
 ```json
  {
 	"status": 200,
@@ -199,7 +199,7 @@ Returns a purchase object if the call succeeded.
 ### Get Purchase records
 Method to read all purchase records which matches the input parameters.
 
-##### GET http://<servername>/phprestapi/purchaser/{purchaser_id}/product?start_date={$start_date}&end_date={$end_date}
+##### GET http://servername/phprestapi/purchaser/{purchaser_id}/product?start_date={$start_date}&end_date={$end_date}
 
 ##### PATH PARAMS
 
@@ -274,7 +274,7 @@ Returns purchase records which matches the input parameters.
 }
 ```
 
-3. Start date is invalid (for example 2019-13-3)
+4. Start date is invalid (for example 2019-13-3)
 ```json
 {
 	"status": 400,
@@ -283,7 +283,7 @@ Returns purchase records which matches the input parameters.
 }
 ```
 
-4. End date is invalid (for example 2019-12-34)
+5. End date is invalid (for example 2019-12-34)
 ```json
 {
 	"status": 400,
@@ -292,7 +292,7 @@ Returns purchase records which matches the input parameters.
 }
 ```
 
-4. Start date is greater than End date is invalid
+6. Start date is greater than End date is invalid
 ```json
 {
 	"status": 400,
